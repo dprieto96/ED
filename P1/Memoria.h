@@ -1,10 +1,9 @@
 ﻿/*
-Número de grupo:
+Número de grupo: D26
 
-Nombre y apellidos de los autores de la práctica (si alguno de los miembros del grupo
-no hay realizado la práctica, no debe incluirse su nombre):
-
-
+	PRIETO REMACHA,DANIEL
+	MAGPALI PESCADOR, MARÍA VICTORIA
+	
 */
 
 using namespace std;
