@@ -26,19 +26,12 @@ public:
 	 */
 	Memoria(unsigned int capacidad) {
 		// A implementar
-		this->cap = capacidad;
-		this->nrOfEl = 0;
-		this->arr = new T*[this->cap];
+		this->cap = capacidad;//Capacidad total del array
+		this->nrOfEl = 0;//Numero de elementos en el array
+		this->arr = new T*[this->cap];//Puntero de punteros de tipo T
 		
-		initialize();
+		initialize();//Inicializa toda la capacidad del array a nullptr
 
-	}
-
-	void initialize(){
-		for (int i = 0; i < cap; i++)
-		{
-			this->arr[i] = nullptr;
-		}
 	}
 
 	/**
@@ -87,6 +80,13 @@ private:
 	int cap;
 	int nrOfEl;
 	T **arr;
+
+	void initialize() {
+		for (int i = 0; i < cap; i++)
+		{
+			this->arr[i] = nullptr;
+		}
+	}
 };
 
 
