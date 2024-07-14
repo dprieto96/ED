@@ -1,0 +1,124 @@
+Material proporcionado
+======================
+main3.cpp: El programa principal que lee y ejecuta casos. 
+Dicho programa NO debe modificarse.
+
+RedPelis.h:  Definición de la parte pública de la clase "RedPelis"
+y otras definiciones auxiliares. A esta definición 
+deben añadirse los detalles de representación, en la parte privada. 
+Así mismo, en este archivo podrán realizarse las definiciones auxiliares 
+e inclusiones de bibliotecas que se consideren oportunas.
+
+RedPelis.cpp: Aquí deben implementarse las operaciones del TAD.
+Aparte de implementar los distintos métodos de la clase, deberá indicarse
+y justificarse su complejidad en los comentarios que los preceden.
+En este archivo puede implementarse también todos aquellos métodos 
+auxiliares que se consideren oportunos. 
+
+IMPORTANTE: Debes incluir también tu nombre y apellidos y tu usuario del juez
+al comienzo del comentario que aparece para tal fin en RedPelis.h y RedPelis.cpp
+
+
+Formato de los archivos de entrada y respuestas para las entradas
+=================================================================
+La entrada comienza con dos enteros. El primero es la cuota mensual. El segundo es el
+extra que se cobra por cada minuto de visionado.
+A continuación, el main lee y ejecuta una serie de órdenes correspondientes a
+acciones a realizar sobre el sistema para la gestión de las peliculas.
+
+Las órdenes son las siguientes (se indica la respuesta asociada a la orden):
+
+- registra_usuario id_usuario tarjeta
+Registra el usuario con identificador 'id_usuario' y con tarjeta 'tarjeta'
+en el sistema. 
+Como respuesta imprime OK si el registro se ha llevado
+a cabo satisfactoriamente, o ERROR_USUARIO_DUPLICADO en caso de que
+el usuario estuviera ya dado de alta en el sistema.
+
+- registra_pelicula id_pelicula num_registro
+Registra la pelicula con identificador 'id_pelicula' y con número de
+registro 'num_registro'. 
+Imprime OK si el registro ha tenido éxito,
+o ERROR_PELICULA_DUPLICADA en caso de que la película ya estuviera
+dada de alta en el sistema.
+
+- mira id_usuario id_pelicula minutos
+Indica al sistema que el usuario 'id_usuario' ha visualizado la 
+película con identificador 'id_pelicula', una cantidad de 
+'minutos' minutos. 
+Si la operación se ejecuta correctamente, imprime OK.
+En otro caso, imprime ERROR_MIRA.
+
+- factura id_usuario
+Consulta y muestra los datos de facturación del usuario con identificador
+'id_usuario'. 
+Si la consulta se ejecuta satisfactoriamente, imprime una
+línea con formato: usuario: id_usuario tarjeta: num_tarjeta_usuario total: total_facturado
+donde num_tarjeta_usuario es la tarjeta que tiene el usuario registrada en el sistema 
+y total_facturado es el valor a pagar (en base a la cuota mensual y al extra por todos los 
+minutos que ha visionado).
+Si el usuario no está dado de alta en el sistema imprime ERROR_USUARIO_NO_EXISTE.
+
+- hits k
+Imprime de principio a fin la lista de películas que resulta de ejecutar la operación 
+'hits(k)' en el sistema. 
+
+
+A continuación se muestra un ejemplo de entrada/salida
+
+
+ENTRADA
+=======
+500 1
+registra_usuario pepe 566
+registra_usuario juan 254
+registra_pelicula godzilla 0001
+registra_pelicula dracula 0002 
+registra_pelicula el_piano 0003
+mira pepe godzilla 5
+mira juan dracula 5
+hits 1
+hits 2
+hits 3
+hits 4
+hits 500
+mira pepe el_piano 20
+hits 1
+hits 2
+hits 3
+factura pepe
+factura juan
+factura lucas
+registra_pelicula dracula 0001
+registra_usuario juan 56
+mira juan it 5
+mira lucas dracula 5
+mira lucas it 5
+
+SALIDA 
+======
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+godzilla
+godzilla dracula
+godzilla dracula el_piano
+godzilla dracula el_piano
+godzilla dracula el_piano
+OK
+el_piano
+el_piano godzilla
+el_piano godzilla dracula
+usuario:pepe tarjeta:566 total:525
+usuario:juan tarjeta:254 total:505
+ERROR_USUARIO_NO_EXISTE
+ERROR_PELICULA_DUPLICADA
+ERROR_USUARIO_DUPLICADO
+ERROR_MIRA
+ERROR_MIRA
+ERROR_MIRA
+

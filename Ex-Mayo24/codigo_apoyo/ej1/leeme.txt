@@ -1,0 +1,78 @@
+Material proporcionado
+======================
+main1.cpp: El programa principal que lee y ejecuta casos. 
+Dicho programa NO debe modificarse.
+
+lista.h: TAD Lista visto en clase, que incorpora el prototipo de la operación 
+pedida al principio de la parte pública. 
+El ejercicio debe resolverse en este archivo, realizando la implementación de 
+la operación, y justificando la complejidad en el comentario habilitado al respecto.
+
+IMPORTANTE: Debes incluir también tu nombre y apellidos y tu usuario del juez
+al comienzo de los comentarios que aparecen en el lista.h proporcionado. 
+
+
+Formato de los archivos de entrada 
+==================================
+Cada caso de prueba consiste en: (1) el número de elementos de la lista a rotar; 
+(2) los elementos de la lista del primero al último; y (3) el valor k.
+
+La secuencia de casos finaliza con una línea que contiene -1. 
+
+Formato de los archivos de salida
+=================================
+Para cada caso de prueba se imprimen los elementos de la lista rotada (del primero al último)
+seguidos de #, seguido de los elementos de la lista rotada (del último al primero), 
+seguidos de #, y por último el número de elementos de la lista.
+
+
+Ejemplo de entrada 
+==================
+0
+
+1
+1
+21
+1
+2
+21 23
+1
+2
+21 23
+-1
+2
+21 23 
+2
+5
+1 2 3 4 5
+2
+5
+1 2 3 4 5
+-2
+6
+1 2 3 4 5 6
+3
+6
+1 2 3 4 5 6
+-3
+6
+1 2 3 4 5 6
+4
+6
+1 2 3 4 5 6
+-4
+-1
+
+Salida producida
+================
+##0
+21#21#1
+23 21#21 23#2
+23 21#21 23#2
+21 23#23 21#2
+4 5 1 2 3#3 2 1 5 4#5
+3 4 5 1 2#2 1 5 4 3#5
+4 5 6 1 2 3#3 2 1 6 5 4#6
+4 5 6 1 2 3#3 2 1 6 5 4#6
+3 4 5 6 1 2#2 1 6 5 4 3#6
+5 6 1 2 3 4#4 3 2 1 6 5#6

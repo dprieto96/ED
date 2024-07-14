@@ -1,0 +1,54 @@
+Material proporcionado
+======================
+main2.cpp: El programa principal que realiza la prueba del
+algoritmo solicitado y el prototipo de la función que 
+debe ejecutar dicho algoritmo (char max_vocalizado(const Arbin<char>& a)). 
+Aparte de dicha función, pueden implementarse todos
+los subprogramas auxiliares que se consideren oportunos.
+Debe indicarse, así mismo, la complejidad resultante
+en el comentario que precede a la función.
+
+IMPORTANTE: Deben ponerse el nombre y apellidos, así como el número de
+usuario en el juez asignado en el examen, al comienzo del archivo main2.cpp
+
+
+Formato de la entrada
+=====================
+Cada caso consta de la descripción de un árbol binario.
+Para describir los árboles se sigue el siguiente convenio:
+-Los árboles vacíos se escriben como #
+-Los árboles simples se escriben como [c],
+ con 'c' el contenido del nodo.
+-Los árboles compuestos se escriben como 
+ (IcD), donde: (i) I es el hijo izquierdo;
+ (ii) c es el contenido de la raiz; 
+ (iii) D es el hijo derecho. 
+ 
+ La lista de casos se termina con un fin de fichero (CTRL^Z). 
+
+Formato de la salida
+====================
+Para cada caso se escribe el resultado devuelto por
+'max_vocalizado' ejecutada sobre el árbol leído.
+
+
+Ejemplo de entrada (El último árbol codifica el árbol del enunciado)
+==================
+#
+[a]
+[b]
+([b]c(([d]f[g])h[j]))
+((([c]E([x]i[F]))b[u])a#)
+((([B]i#)e#)a((([V]P#)H#)E(#o([X]Z#))))
+((([B]i#)e#)a((([U]P#)H#)E(#o([X]Z#))))
+
+Salida asociada
+===============
+?
+a
+b
+d
+x
+X
+U
+
